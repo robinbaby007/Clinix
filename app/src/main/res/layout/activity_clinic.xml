@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/id_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toTopOf="@+id/id_scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/id_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tool_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/id_constraint_clinic_home"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/home_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/id_image_view_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_text_view_clinic_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/hospital_name"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/id_button_appointment_booking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_image_view_hospital" />
+
+            <Button
+                android:id="@+id/id_button_appointment_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/lite_purple"
+                android:fontFamily="@font/athiti"
+                android:text="@string/appointment_booking"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/id_image_view_location_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_clinic_name" />
+
+            <ImageView
+                android:id="@+id/id_image_view_rating"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_view_description_h"
+                app:layout_constraintEnd_toStartOf="@+id/id_text_view_rating"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_image_view_location_icon" />
+
+            <TextView
+                android:id="@+id/id_text_view_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/_4_5"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/id_image_view_rating"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/id_image_view_rating"
+                app:layout_constraintTop_toTopOf="@+id/id_image_view_rating" />
+
+
+            <ImageView
+                android:id="@+id/id_image_view_location_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toTopOf="@+id/id_image_view_rating"
+                app:layout_constraintEnd_toStartOf="@+id/id_text_view_location_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_button_appointment_booking" />
+
+            <TextView
+                android:id="@+id/id_text_view_location_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/location"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/id_image_view_location_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/id_image_view_location_icon"
+                app:layout_constraintTop_toTopOf="@+id/id_image_view_location_icon" />
+
+            <TextView
+                android:id="@+id/id_text_view_description_h"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/description"
+                android:textColor="@color/lite_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_view_description_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_image_view_rating" />
+
+            <TextView
+                android:id="@+id/id_text_view_description_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/description"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_view_services"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_description_h" />
+
+            <TextView
+                android:id="@+id/id_text_view_services"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/services"
+                android:textColor="@color/lite_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/id_recycler_view_services"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_description_value" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_recycler_view_services"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/description"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_view_working_hours"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_services" />
+
+            <TextView
+                android:id="@+id/id_text_view_working_hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/working_hours"
+                android:textColor="@color/lite_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/id_recycler_working_hours"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_recycler_view_services" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_recycler_working_hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/description"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_view_image_gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_working_hours" />
+
+            <TextView
+                android:id="@+id/id_text_view_image_gallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/image_gallery"
+                android:textColor="@color/lite_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/id_recycler_image_gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_recycler_working_hours" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_recycler_image_gallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/description"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_view_reviews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_image_gallery" />
+
+            <TextView
+                android:id="@+id/id_text_view_reviews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/reviews"
+                android:textColor="@color/lite_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/id_recycler_reviews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_recycler_image_gallery" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_recycler_reviews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/description"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@+id/id_constraint_layout_contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_view_reviews" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/id_constraint_layout_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_recycler_reviews">
+
+                <View
+                    android:id="@+id/id_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/lite_grey"
+                    app:layout_constraintBottom_toTopOf="@+id/id_text_view_contact"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/id_text_view_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/athiti"
+                    android:text="@string/contact"
+                    android:textColor="@color/lite_blue"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/id_image_view_call"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_view"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <ImageView
+                    android:id="@+id/id_image_view_call"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_call"
+                    app:layout_constraintBottom_toTopOf="@+id/id_image_view_mail_icon"
+                    app:layout_constraintEnd_toStartOf="@+id/id_text_view_mobile_number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_text_view_contact" />
+
+                <TextView
+                    android:id="@+id/id_text_view_mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/athiti"
+                    android:text="@string/number"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/id_image_view_call"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/id_image_view_call"
+                    app:layout_constraintTop_toTopOf="@+id/id_image_view_call" />
+
+
+                <ImageView
+                    android:id="@+id/id_image_view_mail_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_mail"
+                    app:layout_constraintBottom_toTopOf="@+id/id_button_appointment_booking_contact"
+                    app:layout_constraintEnd_toStartOf="@+id/id_text_view_email"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_image_view_call" />
+
+                <TextView
+                    android:id="@+id/id_text_view_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/athiti"
+                    android:text="@string/email"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/id_image_view_mail_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/id_image_view_mail_icon"
+                    app:layout_constraintTop_toTopOf="@+id/id_image_view_mail_icon" />
+
+                <Button
+                    android:id="@+id/id_button_appointment_booking_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/lite_purple"
+                    android:fontFamily="@font/athiti"
+                    android:text="@string/appointment_booking"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_image_view_mail_icon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

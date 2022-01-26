@@ -10,6 +10,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_grey">#256676</color>
     <color name="lite_white">#95C7D6</color>
+    <color name="lite_purple">#38335A</color>
+    <color name="grey">#494949</color>
+    <color name="lite_blue">#1070BF</color>
+    <color name="lite_grey">#E3E3E3</color>
+
 
 
 </resources>

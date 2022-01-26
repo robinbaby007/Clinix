@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/id_image_view_doctor_image"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_text_view_doctor_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/id_text_view_doctor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/athiti"
+        android:text="@string/doctor_name"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/id_text_view_hospital_name"
+        app:layout_constraintEnd_toStartOf="@+id/id_image_view_rating"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_image_view_doctor_image"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/id_image_view_rating"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_doctor_name"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_view_rating"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/id_text_view_doctor_name"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_doctor_name" />
+
+    <ImageView
+        android:id="@+id/id_image_view_location_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_hospital_name"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_view_location_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/id_text_view_hospital_name"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_hospital_name" />
+
+    <TextView
+        android:id="@+id/id_text_view_hospital_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/athiti"
+        android:text="@string/hospital_name"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/id_text_view_speciality"
+        app:layout_constraintEnd_toStartOf="@+id/id_image_view_location_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/id_image_view_bag_icon"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_view_doctor_name" />
+
+    <TextView
+        android:id="@+id/id_text_view_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/athiti"
+        android:text="@string/_4_5"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/id_image_view_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/id_image_view_rating"
+        app:layout_constraintTop_toTopOf="@+id/id_image_view_rating" />
+
+    <ImageView
+        android:id="@+id/id_image_view_bag_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_bag"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_hospital_name"
+        app:layout_constraintEnd_toStartOf="@+id/id_text_view_hospital_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_hospital_name" />
+
+    <TextView
+        android:id="@+id/id_text_view_location_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/athiti"
+        android:text="@string/location"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/id_image_view_location_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/id_image_view_location_icon"
+        app:layout_constraintTop_toTopOf="@+id/id_image_view_location_icon" />
+
+    <TextView
+        android:id="@+id/id_text_view_speciality"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/athiti"
+        android:text="@string/speciality"
+        android:textColor="@color/lite_blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/id_recycler_view_speciality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_view_hospital_name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recycler_view_speciality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_view_speciality" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/lite_purple"
+        android:fontFamily="@font/athiti"
+        android:text="@string/view_more"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_recycler_view_speciality" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

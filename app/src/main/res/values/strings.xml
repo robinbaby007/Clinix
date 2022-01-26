@@ -3,4 +3,30 @@
     <string name="quote">Keeping you to a better life</string>
     <string name="search">Search</string>
     <string name="filter_by">Filter by</string>
+    <string name="clinics">Clinics</string>
+    <string name="doctors">Doctors</string>
+    <string name="api_key">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI0IiwiaWF0IjoxNjM4NDM5NjE0fQ.7qm4dyI1G3kMf-VAwWrNS_F_D2LjZDX9Wew-HBYUjd4</string>
+    <string name="hospital_name">Hospital Name</string>
+    <string name="location">location</string>
+    <string name="open_24_hours">Open 24 Hours</string>
+    <string name="view_more">View More</string>
+    <string name="_4_5">4.5</string>
+    <string name="services">Services</string>
+    <string name="not_connected">Not Connected !</string>
+    <string name="address">Address</string>
+    <string name="speciality">Speciality</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="appointment_booking">Appointment Booking</string>
+    <string name="description">Description</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="image_gallery">Image Gallery</string>
+    <string name="reviews">Reviews</string>
+    <string name="contact">Contact</string>
+    <string name="number">Number</string>
+    <string name="email">email</string>
+    <string name="day">day</string>
+    <string name="from_time">from time</string>
+    <string name="to">To</string>
+    <string name="to_time">to time</string>
+
 </resources>
