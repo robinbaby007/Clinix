@@ -36,7 +36,7 @@ class CommentsAdapter(private val context:Context, private val reviewList:List<C
          holder.binding.apply {
             Glide.with(context).apply {
                 if (imageData.author_image.isNotEmpty())
-                     load(Utility.IMAGE_URL + imageData.author_image).into(idImageViewUser)
+                     load(Utility.IMAGE_URL + imageData.author_image).circleCrop().into(idImageViewUser)
             }
              idTextName.text=imageData.author
              idTextViewComment.text=imageData.text
