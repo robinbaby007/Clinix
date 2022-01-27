@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -17,6 +19,8 @@ import com.emstell.clinix.network.models.clinic.ClinicBody
 import com.emstell.clinix.network.models.clinic.ClinicResponse
 import com.emstell.clinix.ui.Adapters.ClinicDetailedServiceAdapter
 import com.emstell.clinix.ui.Adapters.ClinicWorkingHoursAdapter
+import com.emstell.clinix.ui.Adapters.CommentsAdapter
+import com.emstell.clinix.ui.Adapters.ImageSlideAdapter
 import com.emstell.clinix.viewmodel.ClinicActivityViewModel
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
@@ -30,16 +34,22 @@ class ClinicActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         activityClinicBinding=ActivityClinicBinding.inflate(layoutInflater)
         setContentView(activityClinicBinding.root)
+        toolBarConfig()
         clinicId= intent.getStringExtra("clinicId")!!
         clinicActivityViewModel=ViewModelProvider(this)[ClinicActivityViewModel::class.java]
         lifecycleScope.launch(Dispatchers.IO) {
             val clinicBody=ClinicBody(clinicId,"124","2","1",Utility.API_KEY,"124")
             clinicActivityViewModel.callClinicDetails(clinicBody)
         }
-        clinicActivityViewModel.getClinicData().observe(this,{
-            setUIData(it)
-        })
+        clinicActivityViewModel.getClinicData().observe(this,{ setUIData(it)})
 
+    }
+
+    private fun toolBarConfig() {
+         setSupportActionBar( activityClinicBinding.idToolBar)
+        supportActionBar?.apply {
+             setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     private fun setUIData(clinicResponse: ClinicResponse){
@@ -60,12 +70,26 @@ class ClinicActivity : AppCompatActivity() {
             }
             idRecyclerWorkingHours.apply {
                 layoutManager = LinearLayoutManager(this@ClinicActivity)
-                adapter= ClinicWorkingHoursAdapter(clinicResponse.workinghours)
+                adapter= ClinicWorkingHoursAdapter(this@ClinicActivity,clinicResponse.workinghours)
             }
-
-
+            idRecyclerImageGallery.apply {
+                layoutManager = LinearLayoutManager(this@ClinicActivity,LinearLayoutManager.HORIZONTAL,false)
+                if(clinicResponse.clinic_images.isNotEmpty())
+                     adapter= ImageSlideAdapter(this@ClinicActivity,clinicResponse.clinic_images)
+                else
+                   idTextViewImageGallery.visibility=View.GONE
+            }
+            idRecyclerReviews.apply {
+                layoutManager = LinearLayoutManager(this@ClinicActivity)
+                if (clinicResponse.clinic_reviews.isEmpty()) idTextNoReviews.visibility=View.VISIBLE  else idTextNoReviews.visibility=View.GONE
+                adapter= CommentsAdapter(this@ClinicActivity,clinicResponse.clinic_reviews)
+            }
          }
+    }
 
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+       if(item.itemId==android.R.id.home)
+           super.onBackPressed()
+        return true
     }
 }

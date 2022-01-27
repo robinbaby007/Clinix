@@ -37,8 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_tool_bar">
 
@@ -302,6 +303,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/id_recycler_image_gallery" />
 
+            <TextView
+                android:id="@+id/id_text_no_reviews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/athiti"
+                android:text="@string/no_reviews"
+                android:textColor="@color/grey"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/id_constraint_layout_contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_recycler_reviews" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/id_recycler_reviews"
                 android:layout_width="0dp"
@@ -312,7 +329,7 @@
                 android:fontFamily="@font/athiti"
                 android:text="@string/description"
                 android:textColor="@color/grey"
-                app:layout_constraintBottom_toTopOf="@+id/id_constraint_layout_contact"
+                app:layout_constraintBottom_toTopOf="@+id/id_text_no_reviews"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/id_text_view_reviews" />
@@ -322,13 +339,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_recycler_reviews">
+                app:layout_constraintTop_toBottomOf="@+id/id_text_no_reviews">
 
                 <View
                     android:id="@+id/id_view"
@@ -442,7 +458,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </ScrollView>

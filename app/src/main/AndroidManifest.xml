@@ -13,14 +13,15 @@
         android:theme="@style/Theme.Clinix">
         <activity
             android:name=".ui.ClinicActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Clinix.NoActionBar"
+            />
         <activity
             android:name=".ui.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

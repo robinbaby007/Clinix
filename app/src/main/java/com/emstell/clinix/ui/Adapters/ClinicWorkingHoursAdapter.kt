@@ -1,5 +1,6 @@
 package com.emstell.clinix.ui.Adapters
 
+import android.content.Context
 import android.content.res.Resources
 import android.graphics.Typeface
 import android.media.ResourceBusyException
@@ -18,7 +19,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.log
 
-class ClinicWorkingHoursAdapter(private val workingHourList: List<Workinghour>): RecyclerView.Adapter<ClinicWorkingHoursAdapter.ClinicWorkingHoursViewHolder>() {
+class ClinicWorkingHoursAdapter(private val context:Context,private val workingHourList: List<Workinghour>): RecyclerView.Adapter<ClinicWorkingHoursAdapter.ClinicWorkingHoursViewHolder>() {
 
     class ClinicWorkingHoursViewHolder(val binding: ItemClinicWorkingHourResourceBinding) :RecyclerView.ViewHolder(binding.root)
 
@@ -36,18 +37,14 @@ class ClinicWorkingHoursAdapter(private val workingHourList: List<Workinghour>):
             val dayName=format.format(Date()).toString().trim().lowercase()
 
             if (dayName == workingHour.name.trim().lowercase()) {
-
-                idTextViewDay.setTextColor(ContextCompat.getColor(this,R.color.lite_blue))
-//                idTextViewFromTime.setTypeface(null, Typeface.BOLD)
-//                idTextViewToTime.setTypeface(null, Typeface.BOLD)
-//                idTextViewTo.setTypeface(null, Typeface.BOLD)
+                idTextViewDay.setTextColor(ContextCompat.getColor(context,R.color.lite_blue))
+                idTextViewFromTime.setTextColor(ContextCompat.getColor(context,R.color.lite_blue))
+                idTextViewToTime.setTextColor(ContextCompat.getColor(context,R.color.lite_blue))
+                idTextViewTo.setTextColor(ContextCompat.getColor(context,R.color.lite_blue))
             }
             idTextViewDay.text=workingHour.name
             idTextViewFromTime.text=workingHour.hour.split("-")[0]
             idTextViewToTime.text=workingHour.hour.split("-")[1]
-
-
-
         }
      }
 

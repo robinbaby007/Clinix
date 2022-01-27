@@ -28,5 +28,8 @@
     <string name="from_time">from time</string>
     <string name="to">To</string>
     <string name="to_time">to time</string>
+    <string name="comment">comment</string>
+    <string name="name">name</string>
+    <string name="no_reviews">No Reviews</string>
 
 </resources>

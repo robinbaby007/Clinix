@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_location.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/ic_sad.xml" value="0.18489583333333334" />
+        <entry key="app/src/main/res/drawable/ic_star.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/progress_bar_style.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/splash_config.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/splash_conig.xml" value="0.18489583333333334" />
@@ -17,7 +18,9 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/item_clinic_resource.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_clinic_working_hour_resource.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_comments_resource.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_doctor_resource.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_image_slide_resource.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/item_service_resource.xml" value="0.5" />
         <entry key="app/src/main/res/layout/progress_bar_style.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25" />
